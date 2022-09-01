@@ -3,15 +3,28 @@ footer {
     text-align: left;
     padding: 65px 32px;
     color: $white;
+
+    @media screen and (max-width: 680px) {
+        background: none;
+    }
+
     .footer-content {
         max-width: 1000px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 50% 50%;
 
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 1fr;
+        }
+
         .left-part {
             padding-right: 30px;
             line-height: 30px;
+
+            @media screen and (max-width: 680px) {
+                display: none;
+            }
 
             h2 {
                 font-family: $font1;
@@ -29,6 +42,11 @@ footer {
             padding-left: 50px;
             display: grid;
             grid-template-rows: repeat(2, 1fr);
+
+            @media screen and (max-width: 680px) {
+                padding-left: 20px;
+            }
+
             h3 {
                 font-size: 0.85rem;
             }
@@ -38,16 +56,19 @@ footer {
                 border: 1px solid rgba(166, 114, 69, 0.151);
                 padding: 7px 13px;
                 width: 250px;
+                @media screen and (max-width: 680px) {
+                    width: 150px;
+                }
             }
             .follow-us {
                 display: flex;
                 margin-top: 50px;
 
-                // h3 {
-                //     @media screen and (max-width: 680px) {
-                //         display: none;
-                //     }
-                // }
+                h3 {
+                    @media screen and (max-width: 680px) {
+                        display: none;
+                    }
+                }
 
                 ul {
                     @include alignChildren(space-around);
